@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("name", username.getText().toString());
-                intent.putExtra("name", password.getText().toString());
+
                 startActivity(intent);
 
             }
