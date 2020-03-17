@@ -2,7 +2,9 @@ package com.example.newone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 public class HOME extends AppCompatActivity {
@@ -12,6 +14,7 @@ public class HOME extends AppCompatActivity {
     ImageButton profile;
     ImageButton  parking;
     ImageButton payment;
+    ImageButton logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +26,17 @@ public class HOME extends AppCompatActivity {
         profile=findViewById(R.id.profile);
         parking=findViewById(R.id.parent);
         payment=findViewById(R.id.pay);
+        logout=findViewById(R.id.logout);
+
+
+
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this, login.class);
+                startActivity(intent);
+            }
+        });
     }
 }
