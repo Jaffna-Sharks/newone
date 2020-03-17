@@ -12,16 +12,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText username;
-    EditText password;
-    Button Login;
-    Button Register;
-
+   ImageButton entroll;
 
 
 
@@ -30,30 +27,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        username = findViewById(R.id.uname);
-        password = findViewById(R.id.pwd);
-        Login = findViewById(R.id.login);
-        Register = findViewById(R.id.Register);
+        entroll = findViewById(R.id.enter);
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        entroll.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,HOME.class);
+                Intent intent = new Intent(MainActivity.this, login.class);
                 startActivity(intent);
             }
+
         });
 
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-
-                startActivity(intent);
-
-            }
-        });
     }
-
 
 
 

@@ -7,33 +7,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class login extends AppCompatActivity {
 
     EditText username;
     EditText password;
-    EditText confrom_password;
-    Button Register;
     Button Login;
-
+    Button Register;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
-
-        username = findViewById(R.id.editText);
-        password = findViewById(R.id.editText2);
-        confrom_password = findViewById(R.id.editText3);
-        Register = findViewById(R.id.register2);
-        Login = findViewById(R.id.login2);
+        setContentView(R.layout.activity_login1);
+        username = findViewById(R.id.uname);
+        password = findViewById(R.id.pwd);
+        Login = findViewById(R.id.login);
+        Register = findViewById(R.id.register);
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main2Activity.this, login.class);
+                Intent intent = new Intent(login.this,HOME.class);
                 startActivity(intent);
             }
         });
@@ -41,9 +36,12 @@ public class Main2Activity extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main2Activity.this, login.class);
-              startActivity(intent);
+                Intent intent = new Intent(login.this, Main2Activity.class);
+
+                startActivity(intent);
+
             }
         });
-   }
+    }
+
 }
