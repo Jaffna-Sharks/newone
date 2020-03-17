@@ -4,13 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/aaas"
     tools:context=".Main2Activity">
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Vehicle Number"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
 
     <Button
         android:id="@+id/login2"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:background="#FAFAFA"
         android:text="Already Registered!! Login.."
         android:textColor="#000000"
         android:textStyle="italic"
@@ -25,49 +53,48 @@
         android:id="@+id/editText3"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:drawableLeft="@android:color/background_dark"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:textColorHint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:drawableLeft="@android:color/background_dark"
         android:hint="User Name "
         android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.115" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:drawableLeft="@android:color/background_dark"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColorHint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.241" />
 
     <Button
         android:id="@+id/register2"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/background_light"
         android:text="Register"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"

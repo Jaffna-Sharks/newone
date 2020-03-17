@@ -41,41 +41,9 @@ public class Main2Activity extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-              // Intent intent = new Intent(Main2Activity.this, MainActivity.class);
-
-               // startActivity(intent);
-                Register.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String username1 = username.getText().toString();
-                        String password1 = password.getText().toString();
-                        String confrom_password1 = confrom_password.getText().toString();
-
-                        if(username.equals("") || password.equals("") || confrom_password.equals("")){
-                            Toast.makeText(getApplicationContext(), "Fields Required", Toast.LENGTH_SHORT).show();
-                        }else{
-                            if(password.equals(confrom_password)){
-                                Boolean checkusername = databaseHelper.CheckUsername(username);
-                                if(checkusername == true){
-                                    Boolean insert = databaseHelper.Insert(username, password);
-                                    if(insert == true){
-                                        Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_SHORT).show();
-                                        username.setText("");
-                                        password.setText("");
-                                        confrom_password.setText("");
-                                    }
-                                }else{
-                                    Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_SHORT).show();
-                                }
-                            }else{
-                                Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
-                });
-
+                Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+              startActivity(intent);
             }
         });
-    }
+   }
 }

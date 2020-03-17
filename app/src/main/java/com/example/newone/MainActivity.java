@@ -33,7 +33,15 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.uname);
         password = findViewById(R.id.pwd);
         Login = findViewById(R.id.login);
-        Register = findViewById(R.id.register);
+        Register = findViewById(R.id.Register);
+
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,HOME.class);
+                startActivity(intent);
+            }
+        });
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
