@@ -2,4 +2,8 @@
 <resources>
     <item name="txtClose" type="id" />
     <item name="notification" type="id" />
+    <item name="ok" type="id" />
+    <item name="email21" type="id" />
+    <item name="vno2" type="id" />
+    <item name="map" type="id" />
 </resources>

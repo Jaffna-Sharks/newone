@@ -1,11 +1,11 @@
 package com.example.newone;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class HOME extends AppCompatActivity {
 
@@ -20,6 +20,7 @@ public class HOME extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_dialog);
+
 
         notification=findViewById(R.id.notification2);
         map=findViewById(R.id.location);
@@ -38,5 +39,29 @@ public class HOME extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this, profile.class);
+                startActivity(intent);
+            }
+        });
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this, payment_recipt.class);
+                startActivity(intent);
+            }
+        });
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this, location.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

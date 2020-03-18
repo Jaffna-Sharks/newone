@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">newone</string>
+    <string name="app_name" translatable="false">I PARKING</string>
+    <string name="payment">Payment</string>
+    <string name="enter_vechile_no">Enter Vechile No</string>
+    <string name="hours">hours</string>
+    <string name="auto_genetate">Auto Genetate</string>
+    <string name="spotnumber">SpotNumber</string>
+    <string name="lotnumber">LotNumber</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="car_company">Car Company</string>
+    <string name="car_colour">Car Colour</string>
+    <string name="parking_payment_receipt">Parking Payment Receipt</string>
+    <string name="emailaddress">EmailAddress</string>
+    <string name="no_of_hours">No.Of.Hours</string>
+    <string name="amount">Amount</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="todo">TODO</string>
 </resources>
