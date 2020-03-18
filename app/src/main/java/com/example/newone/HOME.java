@@ -14,7 +14,7 @@ public class HOME extends AppCompatActivity {
     ImageButton profile;
     ImageButton  parking;
     ImageButton payment;
-    ImageButton logout;
+    ImageButton logout1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,12 @@ public class HOME extends AppCompatActivity {
         profile=findViewById(R.id.profile);
         parking=findViewById(R.id.parent);
         payment=findViewById(R.id.pay);
-        logout=findViewById(R.id.logout);
+        logout1=findViewById(R.id.logout);
 
 
 
 
-        logout.setOnClickListener(new View.OnClickListener() {
+        logout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HOME.this, login.class);
