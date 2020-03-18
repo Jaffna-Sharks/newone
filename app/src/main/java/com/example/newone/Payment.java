@@ -1,8 +1,5 @@
 package com.example.newone;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,16 +7,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Payment extends AppCompatActivity {
 
     EditText email;
     EditText vno;
+    EditText Hour;
+    EditText Amount;
 
-    Spinner carCompany, carColor, paymentMode, spotNumber, lotNumber;
-    TextView parkingEtNoHours;
+
+    Spinner carCompany;
+    Spinner carColor;
+    Spinner paymentMode;
+    Spinner spotNumber;
+    Spinner lotNumber;
+
     Button submit;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -27,14 +33,21 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment1);
 
-       email=findViewById(R.id.email21);
-       vno=findViewById(R.id.vno2);
+       email=findViewById(R.id.aa);
+       vno=findViewById(R.id.vno);
+       carCompany=findViewById(R.id.car1);
+       carColor=findViewById(R.id.car2);
+       Hour=findViewById(R.id.hors);
+       Amount=findViewById(R.id.amount);
+       paymentMode=findViewById(R.id.car3);
+       spotNumber=findViewById(R.id.car5);
+       lotNumber=findViewById(R.id.car4);
+        submit=findViewById(R.id.sub);
 
-        submit=findViewById(R.id.ok);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Payment.this, login.class);
+                Intent intent = new Intent(Payment.this, payment_recipt.class);
                 startActivity(intent);
             }
         });

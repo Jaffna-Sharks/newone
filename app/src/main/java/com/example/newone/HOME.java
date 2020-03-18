@@ -51,7 +51,7 @@ public class HOME extends AppCompatActivity {
         payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HOME.this, payment_recipt.class);
+                Intent intent = new Intent(HOME.this, Payment.class);
                 startActivity(intent);
             }
         });
@@ -62,6 +62,22 @@ public class HOME extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this, Notification.class);
+                startActivity(intent);
+            }
+        });
+        parking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HOME.this,parking.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
