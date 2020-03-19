@@ -40,7 +40,7 @@ public class parking extends AppCompatActivity {
         Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(parking.this,HOME.class);
+                Intent intent = new Intent(parking.this,EditParking.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class parking extends AppCompatActivity {
         Payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(parking.this,Payment.class);
+                Intent intent = new Intent(parking.this,payment_recipt.class);
                 startActivity(intent);
             }
         });
