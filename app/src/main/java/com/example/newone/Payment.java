@@ -6,51 +6,52 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Payment extends AppCompatActivity {
 
+
     EditText email;
-    EditText vno;
-    EditText Hour;
-    EditText Amount;
+    EditText vechileno;
+    EditText hour;
+    EditText amount;
 
+    EditText payment;
+    Spinner model;
+    Spinner colour;
+    Spinner lot;
+    Spinner slot;
 
-    Spinner carCompany;
-    Spinner carColor;
-    Spinner paymentMode;
-    Spinner spotNumber;
-    Spinner lotNumber;
-
-    Button submit;
-
+    ImageButton save;
 
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment1);
+        setContentView(R.layout.payment21);
+        email=findViewById(R.id.editText17);
+        vechileno=findViewById(R.id.editText19);
+        hour=findViewById(R.id.editText22);
+        amount=findViewById(R.id.editText23);
+        payment=findViewById(R.id.editText24);
+        model=findViewById(R.id.spinner3);
+        colour=findViewById(R.id.spinner4);
+        lot=findViewById(R.id.spinner5);
+        slot=findViewById(R.id.spinner6);
+        save=findViewById(R.id.imageButton7);
 
-       email=findViewById(R.id.aa);
-       vno=findViewById(R.id.vno);
-       carCompany=findViewById(R.id.car1);
-       carColor=findViewById(R.id.car2);
-       Hour=findViewById(R.id.hors);
-       Amount=findViewById(R.id.amount);
-       paymentMode=findViewById(R.id.car3);
-       spotNumber=findViewById(R.id.car5);
-       lotNumber=findViewById(R.id.car4);
-        submit=findViewById(R.id.sub);
-
-        submit.setOnClickListener(new View.OnClickListener() {
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Payment.this, payment_recipt.class);
+                Intent intent = new Intent(Payment.this,payment_recipt.class);
                 startActivity(intent);
             }
         });
+
+
 
 
     }

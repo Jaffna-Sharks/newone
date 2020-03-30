@@ -51,7 +51,7 @@ public class HOME extends AppCompatActivity {
         payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HOME.this, payment_recipt.class);
+                Intent intent = new Intent(HOME.this, Payment.class);
                 startActivity(intent);
             }
         });
