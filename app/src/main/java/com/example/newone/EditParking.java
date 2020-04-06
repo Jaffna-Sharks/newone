@@ -23,6 +23,8 @@ public class EditParking extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_parking11);
+
 
         mail1=findViewById(R.id.email2);
         Vechile_no1=findViewById(R.id.v2);
