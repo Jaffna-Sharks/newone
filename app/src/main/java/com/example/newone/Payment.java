@@ -25,7 +25,8 @@ public class Payment extends AppCompatActivity {
     Spinner lot;
     Spinner slot;
 
-    ImageButton save;
+    Button save;
+    Button save1;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -41,12 +42,21 @@ public class Payment extends AppCompatActivity {
         colour=findViewById(R.id.spinner4);
         lot=findViewById(R.id.spinner5);
         slot=findViewById(R.id.spinner6);
-        save=findViewById(R.id.imageButton7);
+        save=findViewById(R.id.button2);
+        save1=findViewById(R.id.button5);
+
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Payment.this,payment_recipt.class);
+                startActivity(intent);
+            }
+        });
+        save1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Payment.this,card.class);
                 startActivity(intent);
             }
         });
