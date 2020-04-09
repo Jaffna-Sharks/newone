@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -18,7 +19,9 @@ public class parking extends AppCompatActivity {
     EditText Hour;
     EditText Location;
 
-    ImageButton Edit;
+    Button Edit;
+    Button VIEW;
+    Button DELETE;
     ImageButton Payment;
     ImageButton Home;
     @Override
@@ -33,7 +36,9 @@ public class parking extends AppCompatActivity {
         Hour=findViewById(R.id.editText18);
         Location=findViewById(R.id.editText20);
 
-        Edit=findViewById(R.id.imageButton3);
+        Edit=findViewById(R.id.button3);
+        VIEW=findViewById(R.id.button6);
+        DELETE=findViewById(R.id.button4);
         Payment=findViewById(R.id.imageButton5);
         Home=findViewById(R.id.imageButton6);
 
