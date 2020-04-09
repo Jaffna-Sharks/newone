@@ -67,13 +67,13 @@
         app:layout_constraintVertical_bias="0.817" />
 
     <EditText
-        android:id="@+id/cardno3"
+        android:id="@+id/cvc"
         android:layout_width="294dp"
         android:layout_height="53dp"
         android:ems="10"
         android:hint="cvc"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -111,7 +111,7 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <EditText
-        android:id="@+id/cardno4"
+        android:id="@+id/name"
         android:layout_width="294dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -141,13 +141,13 @@
         app:layout_constraintVertical_bias="0.635" />
 
     <EditText
-        android:id="@+id/cardno5"
+        android:id="@+id/amoun"
         android:layout_width="294dp"
         android:layout_height="53dp"
         android:ems="10"
         android:hint="amount"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -157,13 +157,13 @@
         app:layout_constraintVertical_bias="0.619" />
 
     <EditText
-        android:id="@+id/cardno2"
+        android:id="@+id/exp"
         android:layout_width="292dp"
         android:layout_height="50dp"
         android:ems="10"
         android:hint="Exp_date"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

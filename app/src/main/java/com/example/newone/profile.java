@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 public class profile extends AppCompatActivity {
 
     Button Edit;
+    Button Delete;
+    Button View;
     EditText name;
     EditText Email;
     EditText Contact_no;
@@ -29,6 +31,8 @@ public class profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile1);
 
         Edit=findViewById(R.id.Edit);
+        Delete=findViewById(R.id.delete);
+        View=findViewById(R.id.viewpro);
         name=findViewById(R.id.name);
         Email=findViewById(R.id.Email);
         Contact_no=findViewById(R.id.Contactno);
