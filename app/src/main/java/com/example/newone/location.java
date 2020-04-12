@@ -18,7 +18,7 @@ public class location extends AppCompatActivity {
 
   //  GoogleMap map;
 
-   Button EDIT ;
+   Button ADD ;
     Button VIEW ;
     Button UPDATE ;
     Button DELETE ;
@@ -38,7 +38,7 @@ public class location extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location1);
 
-        EDIT=findViewById(R.id.button11);
+        ADD=findViewById(R.id.button11);
         VIEW=findViewById(R.id.button12);
         UPDATE=findViewById(R.id.button13);
         DELETE=findViewById(R.id.button14);
