@@ -24,7 +24,7 @@ public class card extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
 
-        cardno=findViewById(R.id.cardno);
+       C
         cexpdate=findViewById(R.id.exp);
         cvc=findViewById(R.id.cvc);
         name=findViewById(R.id.name);
