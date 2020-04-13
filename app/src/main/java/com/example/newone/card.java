@@ -28,17 +28,17 @@ public class card extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
 
-
+        cardno=findViewById(R.id.cardno);
         cexpdate=findViewById(R.id.exp);
         cvc=findViewById(R.id.cvc);
         name=findViewById(R.id.name);
         amount=findViewById(R.id.amoun);
-
         edit=findViewById(R.id.button9);
         View=findViewById(R.id.button8);
         delete=findViewById(R.id.button7);
         add=findViewById(R.id.button17);
         card=findViewById(R.id.button10);
+
 
         card.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
