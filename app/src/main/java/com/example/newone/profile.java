@@ -20,6 +20,7 @@ public class profile extends AppCompatActivity {
     EditText Email;
     EditText Contact_no;
     EditText Vehicle_no;
+    EditText password;
     ImageButton logout2;
 
 
@@ -33,10 +34,11 @@ public class profile extends AppCompatActivity {
         Edit=findViewById(R.id.Edit);
         Delete=findViewById(R.id.delete);
         View=findViewById(R.id.viewpro);
-        name=findViewById(R.id.name);
-        Email=findViewById(R.id.Email);
-        Contact_no=findViewById(R.id.Contactno);
-        Vehicle_no=findViewById(R.id.Vehicleno);
+        name=findViewById(R.id.editText29);
+        Email=findViewById(R.id.editText30);
+        Contact_no=findViewById(R.id.editText31);
+        Vehicle_no=findViewById(R.id.editText32);
+        password=findViewById(R.id.editText34);
         logout2=findViewById(R.id.logout2);
 
         Edit.setOnClickListener(new View.OnClickListener() {

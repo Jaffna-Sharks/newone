@@ -16,6 +16,7 @@ public class card extends AppCompatActivity {
     Button edit;
     Button View;
     Button delete;
+    Button add;
 
 
 
@@ -33,7 +34,7 @@ public class card extends AppCompatActivity {
         edit=findViewById(R.id.button9);
         View=findViewById(R.id.button8);
         delete=findViewById(R.id.button7);
-
+        add=findViewById(R.id.button17);
 
 
     }

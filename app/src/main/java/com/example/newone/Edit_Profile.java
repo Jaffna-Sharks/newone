@@ -16,6 +16,8 @@ public class Edit_Profile extends AppCompatActivity {
     EditText Email;
     EditText Contact_no;
     EditText Vehicle_no;
+    EditText password;
+
 
 
     @SuppressLint("WrongViewCast")
@@ -24,11 +26,12 @@ public class Edit_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit__profile1);
 
-        Save=findViewById(R.id.Save);
-        name=findViewById(R.id.userProfileEditEtNameData);
-        Email = findViewById(R.id.userProfileEditEtEmailData);
-        Contact_no=findViewById(R.id.userProfileEditEtContactNumberData);
-        Vehicle_no=findViewById(R.id.userProfileEditEtCarNumberData);
+        Save=findViewById(R.id.eupdate);
+        name=findViewById(R.id.ename);
+        Email = findViewById(R.id.Eemail);
+        Contact_no=findViewById(R.id.ephone);
+        Vehicle_no=findViewById(R.id.evehicle);
+        password=findViewById(R.id.epassword);
 
         Save.setOnClickListener(new View.OnClickListener() {
             @Override

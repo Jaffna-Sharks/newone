@@ -22,6 +22,7 @@ public class parking extends AppCompatActivity {
     Button Edit;
     Button VIEW;
     Button DELETE;
+    Button ADD;
     ImageButton Payment;
     ImageButton Home;
     @Override
@@ -39,6 +40,7 @@ public class parking extends AppCompatActivity {
         Edit=findViewById(R.id.button3);
         VIEW=findViewById(R.id.button6);
         DELETE=findViewById(R.id.button4);
+        ADD=findViewById(R.id.button16);
         Payment=findViewById(R.id.imageButton5);
         Home=findViewById(R.id.imageButton6);
 
