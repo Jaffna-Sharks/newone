@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class Edit_Profile extends AppCompatActivity {
 
-    Button Save;
+    Button Savee;
     EditText name;
     EditText Email;
     EditText Contact_no;
@@ -26,14 +26,14 @@ public class Edit_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit__profile1);
 
-        Save=findViewById(R.id.eupdate);
+        Savee=findViewById(R.id.eupdate);
         name=findViewById(R.id.ename);
         Email = findViewById(R.id.Eemail);
         Contact_no=findViewById(R.id.ephone);
         Vehicle_no=findViewById(R.id.evehicle);
         password=findViewById(R.id.epassword);
 
-        Save.setOnClickListener(new View.OnClickListener() {
+        Savee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Edit_Profile.this, profile.class);
