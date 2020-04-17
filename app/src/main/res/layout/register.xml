@@ -4,35 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Vehicle Number"
-        android:inputType="number|textPassword"
-        android:textColorHint="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+    tools:context=".Register">
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:inputType="number"
-        android:textColorHint="@android:color/holo_red_dark"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Conform password"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/primary_text_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/login2"
@@ -52,48 +39,39 @@
         android:id="@+id/editText3"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        android:fontFamily="sans-serif-light"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="@android:color/holo_red_dark"
+        android:textColorHint="@android:color/primary_text_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.376" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        android:fontFamily="sans-serif-light"
         android:hint="User Name "
         android:inputType="text"
-        android:textColorHint="@android:color/holo_red_dark"
+        android:textColorHint="@android:color/primary_text_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textWebEmailAddress"
-        android:textColorHint="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <Button
         android:id="@+id/register2"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/submitbtn"
         android:text="Register"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
