@@ -11,7 +11,7 @@
         android:id="@+id/textView52"
         android:layout_width="286dp"
         android:layout_height="71dp"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/andika"
         android:text="I PARKING"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="50sp"
@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.863" />
 
     <Button
         android:id="@+id/register"
@@ -47,17 +47,17 @@
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.863" />
 
     <EditText
         android:id="@+id/uname"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_person_outline_black_24dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/almendra"
         android:hint="User Name "
         android:inputType="textEmailAddress"
         android:textColorHint="@android:color/primary_text_light"
@@ -73,7 +73,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/almendra"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="@android:color/primary_text_light"
@@ -82,5 +82,5 @@
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.734" />
 </androidx.constraintlayout.widget.ConstraintLayout>
