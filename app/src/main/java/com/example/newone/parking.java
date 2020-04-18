@@ -191,8 +191,8 @@ public class parking extends AppCompatActivity {
                             mail.setText(res.getString(2));
                             company.setText(res.getString(3));
                             carcolour.setText(res.getString(4));
-                            Hour.setText(res.getString(4));
-                            slot.setText(res.getString(4));
+                            Hour.setText(res.getString(5));
+                            slot.setText(res.getString(6));
                         }
 
 

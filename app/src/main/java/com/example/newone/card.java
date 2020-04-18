@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 public class card extends AppCompatActivity {
     SQLiteHelper myDb;
+
+    PaymentDatabaseHelper myDb4;
+
+
     EditText cardno;
     EditText cexpdate;
     EditText cvc;
@@ -34,6 +38,7 @@ public class card extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
         myDb = new SQLiteHelper(this);
+        myDb4 = new PaymentDatabaseHelper(this);
 
         cardno = findViewById(R.id.cardno);
         cexpdate = findViewById(R.id.exp);
@@ -52,6 +57,14 @@ public class card extends AppCompatActivity {
         updateData();
         deleteData();
         search();
+
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(card.this,Payment.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -205,4 +218,5 @@ public class card extends AppCompatActivity {
 
 
     }
+
 }

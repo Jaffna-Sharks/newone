@@ -6,10 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".profile">
 
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/submitbtn"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
     <TextView
         android:id="@+id/textView36"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/almendra"
         android:text="Name"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -24,7 +38,8 @@
         android:id="@+id/textView46"
         android:layout_width="130dp"
         android:layout_height="50dp"
-        android:text="Password"
+        android:fontFamily="@font/almendra"
+        android:text="IdentyCard"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,6 +53,7 @@
         android:id="@+id/textView38"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/almendra"
         android:text="Contact No"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -52,6 +68,7 @@
         android:id="@+id/textView45"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/almendra"
         android:text="Vechile no"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -66,6 +83,7 @@
         android:id="@+id/textView37"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/almendra"
         android:text="Email"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -80,6 +98,7 @@
         android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/amarante"
         android:text="USER DETAILS"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp"
@@ -94,43 +113,46 @@
         android:id="@+id/viewpro"
         android:layout_width="131dp"
         android:layout_height="59dp"
+        android:background="@drawable/submitbtn"
         android:text="View"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.851" />
 
     <Button
         android:id="@+id/Edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/submitbtn"
         android:text="Edit"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.848" />
 
     <Button
         android:id="@+id/delete"
         android:layout_width="131dp"
         android:layout_height="58dp"
+        android:background="@drawable/submitbtn"
         android:text="Delete"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <ImageButton
         android:id="@+id/logout2"
@@ -205,7 +227,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter the password"
+        android:hint="Enter the identycard no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,26 +1,30 @@
 package com.example.newone;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class profile extends AppCompatActivity {
-
+    profileDBManager myDb2;
     Button Edit;
     Button Delete;
     Button View;
+    Button Add1;
     EditText name;
     EditText Email;
     EditText Contact_no;
     EditText Vehicle_no;
-    EditText password;
+    EditText identycard;
     ImageButton logout2;
 
 
@@ -31,15 +35,21 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile1);
 
+        myDb2 = new profileDBManager(this);
         Edit=findViewById(R.id.Edit);
         Delete=findViewById(R.id.delete);
+        Add1=findViewById(R.id.button20);
         View=findViewById(R.id.viewpro);
         name=findViewById(R.id.editText29);
         Email=findViewById(R.id.editText30);
         Contact_no=findViewById(R.id.editText31);
         Vehicle_no=findViewById(R.id.editText32);
-        password=findViewById(R.id.editText34);
+        identycard=findViewById(R.id.editText34);
         logout2=findViewById(R.id.logout2);
+        addData();
+        viewAll();
+        updateData();
+        deleteData();
 
 
 
@@ -52,6 +62,162 @@ public class profile extends AppCompatActivity {
         });
 
 
+
+
+    }
+    public void deleteData () {
+        Delete.setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        Integer deleterows = myDb2.DeleteData(name.getText().toString());
+                        if (deleterows > 0)
+                            Toast.makeText(profile.this, "Details Are Deleted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(profile.this, "Details Are Not Deleted", Toast.LENGTH_LONG).show();
+                    }
+                }
+
+        );
+    }
+
+
+    public void updateData() {
+
+        Edit.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdate = myDb2.updateData(name.getText().toString(),
+                                Email.getText().toString(),
+                                Contact_no.getText().toString(),
+                                Vehicle_no.getText().toString(),
+                                identycard.getText().toString());
+                        if (isUpdate == true)
+
+                            Toast.makeText(profile.this, "Details Are Updated", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(profile.this, "Details Are Not Updated", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        );
+    }
+
+    public void addData() {
+
+        Add1.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String textName = name.getText().toString().trim();
+                        String textEmail = Email.getText().toString().trim();
+                        String textcontact = Contact_no.getText().toString().trim();
+                        String textvehicle = Vehicle_no.getText().toString().trim();
+                        String identy = identycard.getText().toString().trim();
+
+                        if(textName.isEmpty()){
+                            name.setError("Enter the name");
+                            name.requestFocus();
+                            return;
+                        }
+
+                        if(textEmail.isEmpty()){
+                            Email.setError("Enter the EmailAddress");
+                            Email.requestFocus();
+                            return;
+                        }
+                        if(textcontact.isEmpty()){
+                            Contact_no.setError("Enter the Contact number");
+                            Contact_no.requestFocus();
+                            return;
+                        }
+                        if(textvehicle.isEmpty()){
+                            Vehicle_no.setError("Enter the vechile number");
+                            Vehicle_no.requestFocus();
+                            return;
+                        }
+                        if(identy.isEmpty()){
+                            identycard.setError("Enter the identycard number");
+                            identycard.requestFocus();
+                            return;
+                        }
+
+                        boolean isInserted = myDb2.insertData(textName,textEmail,textcontact,textvehicle,identy);
+
+                        if (isInserted == true)
+                            Toast.makeText(profile.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(profile.this, "Details Are Not Inserted", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+    }
+   /* public void search() {
+        search.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb.search(sea.getText().toString());
+
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            cardno.setText(res.getString(1));
+                            cexpdate.setText(res.getString(2));
+                            cvc.setText(res.getString(3));
+                            name.setText(res.getString(4));
+                        }
+
+
+                    }
+
+
+                }
+        );
+    }*/
+
+
+
+    public void viewAll() {
+
+        View.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb2.getAllData();
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            buffer.append("NAME :" + res.getString(1) + "\n");
+                            buffer.append("EMAIL :" + res.getString(2) + "\n");
+                            buffer.append("CONTACTNO :" + res.getString(3) + "\n");
+                            buffer.append("VECHILENO : :" + res.getString(4) + "\n");
+                            buffer.append("IDENTYCARD : :" + res.getString(5) + "\n\n");
+
+
+                        }
+
+                        showMessage("USER Details", buffer.toString());
+                    }
+                }
+        );
+    }
+    public void showMessage(String title, String Messsage){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Messsage);
+        builder.show();
 
 
     }
