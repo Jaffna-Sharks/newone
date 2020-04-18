@@ -10,13 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".card"></activity>
-        <activity android:name=".EditParking" />
         <activity android:name=".parking" />
         <activity android:name=".Notification" />
         <activity android:name=".location" />
         <activity android:name=".payment_recipt" />
         <activity android:name=".Payment" />
-        <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
         <activity android:name=".login" />
         <activity android:name=".HOME" />

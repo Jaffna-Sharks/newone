@@ -41,13 +41,7 @@ public class profile extends AppCompatActivity {
         password=findViewById(R.id.editText34);
         logout2=findViewById(R.id.logout2);
 
-        Edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(profile.this, Edit_Profile.class);
-                startActivity(intent);
-            }
-        });
+
 
         logout2.setOnClickListener(new View.OnClickListener() {
             @Override
