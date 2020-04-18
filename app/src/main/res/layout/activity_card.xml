@@ -15,22 +15,23 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/submitbtn"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.733" />
 
     <Button
         android:id="@+id/button7"
@@ -39,13 +40,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="35dp"
+        android:background="@drawable/submitbtn"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/button8"
@@ -54,13 +56,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="35dp"
+        android:background="@drawable/submitbtn"
         android:text="View"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/button10"
@@ -69,13 +72,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="35dp"
+        android:background="@drawable/submitbtn"
         android:text="Card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.975" />
 
     <Button
         android:id="@+id/button9"
@@ -84,13 +88,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="35dp"
+        android:background="@drawable/submitbtn"
         android:text="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.839" />
 
     <EditText
         android:id="@+id/cvc"
@@ -112,6 +117,7 @@
         android:id="@+id/textView8"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/amarante"
         android:text="cvc"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -126,6 +132,7 @@
         android:id="@+id/textView9"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/amarante"
         android:text="Name"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -172,6 +179,7 @@
         android:id="@+id/textView7"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/amarante"
         android:text="Exp_Date"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -202,6 +210,7 @@
         android:id="@+id/textView5"
         android:layout_width="130dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/amarante"
         android:text="@string/card_no"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -216,6 +225,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/almendra"
         android:text="CARD DETAILS"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp"
@@ -230,11 +240,12 @@
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/submitbtn"
         android:text="ADD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.623" />
 </androidx.constraintlayout.widget.ConstraintLayout>
