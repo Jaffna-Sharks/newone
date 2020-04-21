@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.761" />
 
     <EditText
-        android:id="@+id/editText25"
+        android:id="@+id/city"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -164,7 +164,7 @@
         app:layout_constraintVertical_bias="0.242" />
 
     <EditText
-        android:id="@+id/editText26"
+        android:id="@+id/street"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -177,7 +177,7 @@
         app:layout_constraintVertical_bias="0.359" />
 
     <EditText
-        android:id="@+id/editText27"
+        android:id="@+id/dis"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -190,7 +190,7 @@
         app:layout_constraintVertical_bias="0.484" />
 
     <EditText
-        android:id="@+id/editText28"
+        android:id="@+id/province"
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:ems="10"

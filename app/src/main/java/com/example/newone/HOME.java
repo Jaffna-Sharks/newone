@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HOME extends AppCompatActivity {
 
-    ImageButton notification;
+
     ImageButton map;
     ImageButton profile;
     ImageButton  parking;
@@ -22,7 +22,7 @@ public class HOME extends AppCompatActivity {
         setContentView(R.layout.custom_dialog);
 
 
-        notification=findViewById(R.id.notification2);
+
         map=findViewById(R.id.location);
         profile=findViewById(R.id.profile);
         parking=findViewById(R.id.parent);
@@ -63,13 +63,7 @@ public class HOME extends AppCompatActivity {
             }
         });
 
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HOME.this, Notification.class);
-                startActivity(intent);
-            }
-        });
+
         parking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
