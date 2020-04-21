@@ -7,21 +7,6 @@
 
     tools:context=".HOME">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="286dp"
-        android:layout_height="71dp"
-        android:fontFamily="@font/andika"
-        android:text="I PARKING"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.624"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
-
     <ImageButton
         android:id="@+id/logout"
         android:layout_width="90dp"
@@ -98,4 +83,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.27" />
 
+    <ImageButton
+        android:id="@+id/notification2"
+        android:layout_width="158dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
 </androidx.constraintlayout.widget.ConstraintLayout>
