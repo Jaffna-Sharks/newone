@@ -126,6 +126,7 @@ public class Payment extends AppCompatActivity {
                             payment.requestFocus();
                             return;
                         }
+                        boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
 
                         if (isInserted == true)
