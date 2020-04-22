@@ -42,10 +42,7 @@ public class Payment extends AppCompatActivity {
         hour=findViewById(R.id.editText22);
         amount=findViewById(R.id.editText23);
         payment=findViewById(R.id.editText24);
-       add=findViewById(R.id.button21);
-        edit=findViewById(R.id.button22);
-        cash=findViewById(R.id.button2);
-        card=findViewById(R.id.button5);
+       
         updateData();
         addData();
         viewAll();
