@@ -100,7 +100,12 @@ public class Payment extends AppCompatActivity {
                         String textAmount = amount.getText().toString().trim();
                         String textpayment = payment.getText().toString().trim();
 
-                        
+                        if(textvechile.isEmpty()){
+                            vechileno.setError("Enter the Vechile Number");
+                            vechileno.requestFocus();
+                            return;
+                        }
+
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
 
