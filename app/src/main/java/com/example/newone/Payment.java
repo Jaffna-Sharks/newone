@@ -127,7 +127,6 @@ public class Payment extends AppCompatActivity {
                             return;
                         }
 
-                        boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
                         if (isInserted == true)
                             Toast.makeText(Payment.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
