@@ -39,6 +39,7 @@ public class Payment extends AppCompatActivity {
         myDb4 = new PaymentDatabaseHelper(this);
         name=findViewById(R.id.editText17);
         vechileno=findViewById(R.id.editText19);
+        hour=findViewById(R.id.editText22);
        add=findViewById(R.id.button21);
         edit=findViewById(R.id.button22);
         cash=findViewById(R.id.button2);
