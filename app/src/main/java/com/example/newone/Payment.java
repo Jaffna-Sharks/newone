@@ -174,7 +174,9 @@ public class Payment extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Cursor res = myDb4.getAllData();
-                        
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
                         }
                         StringBuffer buffer = new StringBuffer();
                         while (res.moveToNext()) {
