@@ -111,46 +111,55 @@ public class profile extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                         String textName = name.getText().toString().trim();
                         String textEmail = Email.getText().toString().trim();
                         String textcontact = Contact_no.getText().toString().trim();
                         String textvehicle = Vehicle_no.getText().toString().trim();
                         String identy = identycard.getText().toString().trim();
+                        boolean isValid=true;
 
                         if(textName.isEmpty()){
                             name.setError("Enter the name");
                             name.requestFocus();
-                            return;
+                            isValid=false;
+
                         }
 
                         if(textEmail.isEmpty()){
                             Email.setError("Enter the EmailAddress");
                             Email.requestFocus();
-                            return;
+                            isValid=false;
+                        }else if(!textEmail.matches(emailPattern)) {
+                            Email.setError("Invalid  EmailAddress");
+                            Email.requestFocus();
+                            isValid=false;
+
                         }
                         if(textcontact.isEmpty()){
                             Contact_no.setError("Enter the Contact number");
                             Contact_no.requestFocus();
-                            return;
+                            isValid=false;
                         }
                         if(textvehicle.isEmpty()){
                             Vehicle_no.setError("Enter the vechile number");
                             Vehicle_no.requestFocus();
-                            return;
+                            isValid=false;
                         }
                         if(identy.isEmpty()){
                             identycard.setError("Enter the identycard number");
                             identycard.requestFocus();
-                            return;
+                            isValid=false;
+                        }
+                        if(isValid){
+                            boolean isInserted = myDb2.insertData(textName,textEmail,textcontact,textvehicle,identy);
+
+                            if (isInserted == true)
+                                Toast.makeText(profile.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
+                            else
+                                Toast.makeText(profile.this, "Details Are Not Inserted", Toast.LENGTH_LONG).show();
                         }
 
-                        boolean isInserted = myDb2.insertData(textName,textEmail,textcontact,textvehicle,identy);
-
-                        if (isInserted == true)
-                            Toast.makeText(profile.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(profile.this, "Details Are Not Inserted", Toast.LENGTH_LONG).show();
                     }
                 }
         );
