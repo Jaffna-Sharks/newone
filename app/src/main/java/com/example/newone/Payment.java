@@ -194,12 +194,7 @@ public class Payment extends AppCompatActivity {
                 }
         );
     }
-    public void showMessage(String title, String Messsage){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(Messsage);
-        builder.show();
+    
 
 
     }
