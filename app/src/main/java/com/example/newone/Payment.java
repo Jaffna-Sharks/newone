@@ -44,6 +44,7 @@ public class Payment extends AppCompatActivity {
         payment=findViewById(R.id.editText24);
         add=findViewById(R.id.button21);
         edit=findViewById(R.id.button22);
+        cash=findViewById(R.id.button2);
         updateData();
         addData();
         viewAll();
