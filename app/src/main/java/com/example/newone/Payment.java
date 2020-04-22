@@ -120,6 +120,12 @@ public class Payment extends AppCompatActivity {
                             amount.requestFocus();
                             return;
                         }
+                        if(textpayment.isEmpty()){
+                            payment.setError("Enter the Payment method");
+                            payment.requestFocus();
+                            return;
+                        }
+
 
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
