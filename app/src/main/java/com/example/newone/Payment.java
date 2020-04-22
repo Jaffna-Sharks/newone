@@ -18,7 +18,7 @@ public class Payment extends AppCompatActivity {
 
     PaymentDatabaseHelper myDb4;
 
-    EditText name;
+     name;
     EditText vechileno;
     EditText hour;
     EditText amount;

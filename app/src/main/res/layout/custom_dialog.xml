@@ -7,39 +7,6 @@
 
     tools:context=".HOME">
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="135dp"
-        android:layout_height="43dp"
-        android:fontFamily="@font/andika"
-        android:gravity="center_horizontal"
-        android:text="PAYMENT"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="411dp"
-        android:layout_height="78dp"
-        android:fontFamily="@font/andika"
-        android:gravity="center_horizontal"
-        android:text="I PARKING"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
-
     <ImageButton
         android:id="@+id/logout"
         android:layout_width="90dp"
@@ -57,7 +24,7 @@
 
     <ImageButton
         android:id="@+id/parent"
-        android:layout_width="135dp"
+        android:layout_width="138dp"
         android:layout_height="170dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -66,10 +33,10 @@
         android:background="@drawable/ee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.764" />
 
     <ImageButton
         android:id="@+id/location"
@@ -85,11 +52,11 @@
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <ImageButton
         android:id="@+id/pay"
-        android:layout_width="135dp"
+        android:layout_width="138dp"
         android:layout_height="170dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -97,71 +64,37 @@
         android:background="@drawable/b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.764" />
 
     <ImageButton
         android:id="@+id/profile"
-        android:layout_width="135dp"
+        android:layout_width="138dp"
         android:layout_height="170dp"
         android:layout_alignParentTop="true"
 
         android:background="@drawable/e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="0.27" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="135dp"
-        android:layout_height="43dp"
-        android:fontFamily="@font/andika"
-        android:gravity="center_horizontal"
-        android:text="LOCATION"
-        android:textAlignment="center"
-        android:textSize="24sp"
+    <ImageButton
+        android:id="@+id/notification2"
+        android:layout_width="158dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/images"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="135dp"
-        android:layout_height="43dp"
-        android:fontFamily="@font/andika"
-        android:gravity="center_horizontal"
-        android:text="PARKING"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
-
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="135dp"
-        android:layout_height="43dp"
-        android:fontFamily="@font/andika"
-        android:gravity="center_horizontal"
-        android:text="PROFILE"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
-
+        app:layout_constraintVertical_bias="0.043" />
 </androidx.constraintlayout.widget.ConstraintLayout>
