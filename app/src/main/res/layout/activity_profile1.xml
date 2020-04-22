@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/qw"
     tools:context=".profile">
 
     <Button
@@ -11,32 +12,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/submitbtn"
+        android:gravity="center_horizontal"
         android:text="ADD"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058"
-        android:gravity="center_horizontal" />
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:fontFamily="@font/almendra"
+        android:gravity="end"
         android:text="Name"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.199"
-        android:gravity="end"
         tools:ignore="RtlCompat" />
 
     <TextView
@@ -44,68 +44,72 @@
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:fontFamily="@font/almendra"
+        android:gravity="center_horizontal"
         android:text="IdentyCard"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.632" />
 
     <TextView
         android:id="@+id/textView38"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:fontFamily="@font/almendra"
+        android:gravity="center_horizontal"
         android:text="Contact No"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <TextView
         android:id="@+id/textView45"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:fontFamily="@font/almendra"
+        android:gravity="center_horizontal"
         android:text="Vechile no"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/textView37"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:fontFamily="@font/almendra"
+        android:gravity="center_horizontal"
         android:text="Email"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.312" />
 
     <TextView
         android:id="@+id/textView32"
@@ -124,8 +128,8 @@
 
     <Button
         android:id="@+id/viewpro"
-        android:layout_width="131dp"
-        android:layout_height="59dp"
+        android:layout_width="120dp"
+        android:layout_height="51dp"
         android:background="@drawable/submitbtn"
         android:text="View"
         android:textSize="20sp"
@@ -139,8 +143,8 @@
 
     <Button
         android:id="@+id/Edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="51dp"
         android:background="@drawable/submitbtn"
         android:text="Edit"
         android:textSize="20sp"
@@ -154,15 +158,15 @@
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="131dp"
-        android:layout_height="58dp"
+        android:layout_width="120dp"
+        android:layout_height="51dp"
         android:background="@drawable/submitbtn"
         android:text="Delete"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/viewpro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton

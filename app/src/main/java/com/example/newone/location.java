@@ -103,3 +103,115 @@ public class location extends AppCompatActivity {
                 }
         );
    }
+
+    public void addData() {
+
+        ADD.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String textCity = city.getText().toString().trim();
+                        String textStreet = STREET.getText().toString().trim();
+                        String textDis= DISTRICT.getText().toString().trim();
+                        String textPro = PROVINCE.getText().toString().trim();
+                        // String amount = amount.getText().toString().trim();
+
+                        if(textCity.isEmpty()){
+                            city.setError("Enter the city");
+                            city.requestFocus();
+                            return;
+                        }
+
+                        if(textStreet.isEmpty()){
+                            STREET.setError("Enter the Street");
+                            STREET.requestFocus();
+                            return;
+                        }
+                        if(textDis.isEmpty()){
+                            DISTRICT.setError("Enter the District");
+                            DISTRICT.requestFocus();
+                            return;
+                        }
+                        if(textPro.isEmpty()){
+                            PROVINCE.setError("Enter the Province");
+                            PROVINCE.requestFocus();
+                            return;
+                        }
+
+                        boolean isInserted = myDb3.insertData(textCity,textStreet,textDis,textPro);
+
+                        if (isInserted == true)
+                            Toast.makeText(location.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(location.this, "Details Are Not Inserted", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+    }
+    public void search() {
+        SEARCH.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb3.search(Sea2.getText().toString());
+
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            city.setText(res.getString(1));
+                            STREET.setText(res.getString(2));
+                            DISTRICT.setText(res.getString(3));
+                            PROVINCE.setText(res.getString(4));
+                        }
+
+
+                    }
+
+
+                }
+        );
+    }
+
+
+
+    public void viewAll() {
+
+        VIEW.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb3.getAllData();
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            buffer.append("City :" + res.getString(1) + "\n");
+                            buffer.append("Street :" + res.getString(2) + "\n");
+                            buffer.append("district:" + res.getString(3) + "\n");
+                            buffer.append("Province : :" + res.getString(4) + "\n\n");
+
+
+                        }
+
+                        showMessage("Location Details", buffer.toString());
+                    }
+                }
+        );
+    }
+    public void showMessage(String title, String Messsage){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Messsage);
+        builder.show();
+
+
+    }
+}
