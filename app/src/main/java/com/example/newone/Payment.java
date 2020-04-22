@@ -18,7 +18,7 @@ public class Payment extends AppCompatActivity {
 
     PaymentDatabaseHelper myDb4;
 
-     name;
+    EditText name;
     EditText vechileno;
     EditText hour;
     EditText amount;
@@ -51,13 +51,7 @@ public class Payment extends AppCompatActivity {
         viewAll();
 
 
-         card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Payment.this,card.class);
-                startActivity(intent);
-            }
-        });
+         
 
 
 
