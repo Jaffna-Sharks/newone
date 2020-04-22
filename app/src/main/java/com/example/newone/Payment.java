@@ -105,6 +105,11 @@ public class Payment extends AppCompatActivity {
                             vechileno.requestFocus();
                             return;
                         }
+                        if(textName.isEmpty()){
+                            name.setError("Enter the Nmae");
+                            name.requestFocus();
+                            return;
+                        }
 
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
