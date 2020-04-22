@@ -36,7 +36,7 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment21);
 
-       
+        myDb4 = new PaymentDatabaseHelper(this);
        add=findViewById(R.id.button21);
         edit=findViewById(R.id.button22);
         cash=findViewById(R.id.button2);
