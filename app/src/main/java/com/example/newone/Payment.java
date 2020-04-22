@@ -110,6 +110,11 @@ public class Payment extends AppCompatActivity {
                             name.requestFocus();
                             return;
                         }
+                        if(textHours.isEmpty()){
+                            hour.setError("Enter the Parking Hours");
+                            hour.requestFocus();
+                            return;
+                        }
 
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
