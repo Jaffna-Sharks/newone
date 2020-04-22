@@ -22,16 +22,21 @@ public class location extends AppCompatActivity {
 
     //  GoogleMap map;
     LocationDatabaseHelper myDb3;
-    Button ADD;
-    Button VIEW;
-    Button UPDATE;
-    Button DELETE;
-    Button SEARCH;
+    Button ADD ;
+    Button VIEW ;
+    Button UPDATE ;
+    Button DELETE ;
+    Button SEARCH ;
     EditText city;
     EditText STREET;
     EditText DISTRICT;
     EditText PROVINCE;
     EditText Sea2;
+
+
+
+
+
 
 
     @Override
@@ -40,21 +45,61 @@ public class location extends AppCompatActivity {
         setContentView(R.layout.activity_location1);
         myDb3 = new LocationDatabaseHelper(this);
 
-        ADD = findViewById(R.id.button11);
-        VIEW = findViewById(R.id.button12);
-        UPDATE = findViewById(R.id.button13);
-        DELETE = findViewById(R.id.button14);
-        Sea2 = findViewById(R.id.editText21);
-        SEARCH = findViewById(R.id.button15);
-        city = findViewById(R.id.city);
-        STREET = findViewById(R.id.street);
-        DISTRICT = findViewById(R.id.dis);
-        PROVINCE = findViewById(R.id.province);
-//        addData();
-//        viewAll();
-//        updateData();
-//        deleteData();
-//        search();
+        ADD=findViewById(R.id.button11);
+        VIEW=findViewById(R.id.button12);
+        UPDATE=findViewById(R.id.button13);
+        DELETE=findViewById(R.id.button14);
+        Sea2=findViewById(R.id.editText21);
+        SEARCH =findViewById(R.id.button15);
+        city=findViewById(R.id.city);
+        STREET=findViewById(R.id.street);
+        DISTRICT=findViewById(R.id.dis);
+        PROVINCE=findViewById(R.id.province);
+        addData();
+        viewAll();
+        updateData();
+        deleteData();
+        search();
 
     }
-}
+
+
+    public void deleteData () {
+        DELETE.setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        Integer deleterows = myDb3.DeleteData(city.getText().toString());
+                        if (deleterows > 0)
+                            Toast.makeText(location.this, "Details Are Deleted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(location.this, "Details Are Not Deleted", Toast.LENGTH_LONG).show();
+                    }
+                }
+
+        );
+    }
+
+
+    public void updateData() {
+
+        UPDATE.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdate = myDb3.updateData(city.getText().toString(),
+                                STREET.getText().toString(),
+                                DISTRICT.getText().toString(),
+                                PROVINCE.getText().toString());
+                        if (isUpdate == true)
+
+                            Toast.makeText(location.this, "Details Are Updated", Toast.LENGTH_LONG).show();
+
+                        else
+                            Toast.makeText(location.this, "Details Are Not Updated", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        );
+   }
