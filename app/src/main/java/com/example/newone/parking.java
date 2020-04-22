@@ -58,13 +58,7 @@ public class parking extends AppCompatActivity {
         deleteData();
         search();
 
-        Payment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(parking.this,Payment.class);
-                startActivity(intent);
-            }
-        });
+      
 
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
