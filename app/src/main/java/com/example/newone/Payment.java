@@ -100,32 +100,7 @@ public class Payment extends AppCompatActivity {
                         String textAmount = amount.getText().toString().trim();
                         String textpayment = payment.getText().toString().trim();
 
-                        if(textvechile.isEmpty()){
-                            vechileno.setError("Enter the Vechile Number");
-                            vechileno.requestFocus();
-                            return;
-                        }
-
-                        if(textName.isEmpty()){
-                            name.setError("Enter the Nmae");
-                            name.requestFocus();
-                            return;
-                        }
-                        if(textHours.isEmpty()){
-                            hour.setError("Enter the Parking Hours");
-                            hour.requestFocus();
-                            return;
-                        }
-                        if(textAmount.isEmpty()){
-                            amount.setError("Enter the amount");
-                            amount.requestFocus();
-                            return;
-                        }
-                        if(textpayment.isEmpty()){
-                            payment.setError("Enter the Payment method");
-                            payment.requestFocus();
-                            return;
-                        }
+                        
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
 
 
