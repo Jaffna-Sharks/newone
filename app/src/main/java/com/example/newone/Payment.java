@@ -94,11 +94,7 @@ public class Payment extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        String textvechile = vechileno.getText().toString().trim();
-                        String textName = name.getText().toString().trim();
-                        String textHours = hour.getText().toString().trim();
-                        String textAmount = amount.getText().toString().trim();
-                        String textpayment = payment.getText().toString().trim();
+                        
 
                         if(textvechile.isEmpty()){
                             vechileno.setError("Enter the Vechile Number");
