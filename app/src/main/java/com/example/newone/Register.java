@@ -44,7 +44,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
 
                 String PASSWORD_REGEX =
-                        "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{6,16}$";
+                        "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$";
 
                 String username = rusername.getText().toString();
                 String password = rpassword.getText().toString();
