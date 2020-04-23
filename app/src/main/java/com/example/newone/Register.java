@@ -48,7 +48,13 @@ public class Register extends AppCompatActivity {
 
                 String username = rusername.getText().toString();
                 String password = rpassword.getText().toString();
+                String confirm_password = rconfrom_password.getText().toString();
                 boolean isValid=true;
+                if(username.isEmpty()) {
+                    rusername.setError("Enter the Username");
+                    rusername.requestFocus();
+                    isValid = false;
+                }
                 if(password.isEmpty()){
                     rpassword.setError("Enter the password");
                     rpassword.requestFocus();
@@ -57,10 +63,14 @@ public class Register extends AppCompatActivity {
                     rpassword.setError("Invalid  Password");
                     rpassword.requestFocus();
                     isValid=false;
-
+                }
+                if(confirm_password.isEmpty()) {
+                    rconfrom_password.setError("Enter the confirm_password");
+                    rconfrom_password.requestFocus();
+                    isValid = false;
                 }
 
-                String confirm_password = rconfrom_password.getText().toString();
+
 
                 if(isValid) {
                     if (username.equals("") || password.equals("") || confirm_password.equals("")) {
