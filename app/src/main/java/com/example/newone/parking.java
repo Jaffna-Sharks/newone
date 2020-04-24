@@ -175,7 +175,25 @@ public class parking extends AppCompatActivity {
 
     }
     public void search() {
-        
+        SESARCH.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb1.search(search22.getText().toString());
+
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            Vechile_no.setText(res.getString(1));
+                            mail.setText(res.getString(2));
+                            company.setText(res.getString(3));
+                            carcolour.setText(res.getString(4));
+                            Hour.setText(res.getString(5));
+                            slot.setText(res.getString(6));
+                        }
 
 
                     }
