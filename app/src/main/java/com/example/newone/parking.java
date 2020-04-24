@@ -35,7 +35,23 @@ public class parking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.abc_screen_simple);
 
-       
+        myDb1 = new parkingDatabaseHelper(this);
+
+        mail=findViewById(R.id.editText15);
+        Vechile_no=findViewById(R.id.editText16);
+        company=findViewById(R.id.editText33);
+        carcolour=findViewById(R.id.editText35);
+        Hour=findViewById(R.id.editText18);
+        slot=findViewById(R.id.editText20);
+        search22=findViewById(R.id.editText5);
+        SESARCH=findViewById(R.id.button19);
+        Edit=findViewById(R.id.button3);
+        VIEW=findViewById(R.id.button6);
+        DELETE=findViewById(R.id.button4);
+        ADD=findViewById(R.id.button16);
+        Payment=findViewById(R.id.imageButton5);
+        Home=findViewById(R.id.imageButton6);
+
         addData();
         viewAll();
         updateData();
