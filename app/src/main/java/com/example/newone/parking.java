@@ -66,7 +66,13 @@ public class parking extends AppCompatActivity {
             }
         });
 
-        
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(parking.this,HOME.class);
+                startActivity(intent);
+            }
+        });
     }
     public void deleteData () {
         DELETE.setOnClickListener(
