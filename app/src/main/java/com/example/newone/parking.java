@@ -126,33 +126,33 @@ public class parking extends AppCompatActivity {
 
 
                         if(vechhileno.isEmpty()){
-                            Vechile_no.setError("Enter the Card Number");
+                            Vechile_no.setError("Enter the vechile Number");
                             Vechile_no.requestFocus();
                             return;
                         }
 
                         if(Email.isEmpty()){
-                            mail.setError("Enter the Card Expery Date");
+                            mail.setError("Enter the Email address");
                             mail.requestFocus();
                             return;
                         }
                         if(Company.isEmpty()){
-                            company.setError("Enter the CVC");
+                            company.setError("Enter the Company name");
                             company.requestFocus();
                             return;
                         }
                         if(colour.isEmpty()){
-                            carcolour.setError("Enter the name in the card");
+                            carcolour.setError("Enter the Car Colour");
                             carcolour.requestFocus();
                             return;
                         }
                         if(hour.isEmpty()){
-                            Hour.setError("Enter the name in the card");
+                            Hour.setError("Enter the Parking hours");
                             Hour.requestFocus();
                             return;
                         }
                         if(Slot.isEmpty()){
-                            slot.setError("Enter the name in the card");
+                            slot.setError("Enter the Parking Slot");
                             slot.requestFocus();
                             return;
                         }

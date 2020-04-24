@@ -18,7 +18,7 @@ public class Payment extends AppCompatActivity {
 
     PaymentDatabaseHelper myDb4;
 
-     name;
+    EditText name;
     EditText vechileno;
     EditText hour;
     EditText amount;
@@ -42,7 +42,7 @@ public class Payment extends AppCompatActivity {
         hour=findViewById(R.id.editText22);
         amount=findViewById(R.id.editText23);
         payment=findViewById(R.id.editText24);
-       add=findViewById(R.id.button21);
+        add=findViewById(R.id.button21);
         edit=findViewById(R.id.button22);
         cash=findViewById(R.id.button2);
         card=findViewById(R.id.button5);
@@ -51,13 +51,14 @@ public class Payment extends AppCompatActivity {
         viewAll();
 
 
-         card.setOnClickListener(new View.OnClickListener() {
+        card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Payment.this,card.class);
                 startActivity(intent);
             }
         });
+
 
 
 
@@ -104,7 +105,6 @@ public class Payment extends AppCompatActivity {
                             vechileno.requestFocus();
                             return;
                         }
-
                         if(textName.isEmpty()){
                             name.setError("Enter the Nmae");
                             name.requestFocus();
@@ -126,7 +126,9 @@ public class Payment extends AppCompatActivity {
                             return;
                         }
 
+
                         boolean isInserted = myDb4.insertData(textvechile,textName,textHours,textAmount,textpayment);
+
 
                         if (isInserted == true)
                             Toast.makeText(Payment.this, "Details Are Inserted", Toast.LENGTH_LONG).show();

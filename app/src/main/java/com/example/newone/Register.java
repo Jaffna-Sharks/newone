@@ -42,28 +42,56 @@ public class Register extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String PASSWORD_REGEX =
+                        "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$";
+
                 String username = rusername.getText().toString();
                 String password = rpassword.getText().toString();
                 String confirm_password = rconfrom_password.getText().toString();
+                boolean isValid=true;
+                if(username.isEmpty()) {
+                    rusername.setError("Enter the Username");
+                    rusername.requestFocus();
+                    isValid = false;
+                }
+                if(password.isEmpty()){
+                    rpassword.setError("Enter the password");
+                    rpassword.requestFocus();
+                    isValid=false;
+                }else if(!password.matches(PASSWORD_REGEX)) {
+                    rpassword.setError("Invalid  Password");
+                    rpassword.requestFocus();
+                    isValid=false;
+                }
+                if(confirm_password.isEmpty()) {
+                    rconfrom_password.setError("Enter the confirm_password");
+                    rconfrom_password.requestFocus();
+                    isValid = false;
+                }
 
-                if(username.equals("") || password.equals("") || confirm_password.equals("")){
-                    Toast.makeText(getApplicationContext(), "Fields Required", Toast.LENGTH_SHORT).show();
-                }else{
-                    if(password.equals(confirm_password)){
-                        Boolean checkusername = loginDatabaseHelper.CheckUsername(username);
-                        if(checkusername == true){
-                            Boolean insert = loginDatabaseHelper.Insert(username, password);
-                            if(insert == true){
-                                Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_SHORT).show();
-                                rusername.setText("");
-                                rpassword.setText("");
-                                rconfrom_password.setText("");
+
+
+                if(isValid) {
+                    if (username.equals("") || password.equals("") || confirm_password.equals("")) {
+                        Toast.makeText(getApplicationContext(), "Fields Required", Toast.LENGTH_SHORT).show();
+                    } else {
+                        if (password.equals(confirm_password)) {
+                            Boolean checkusername = loginDatabaseHelper.CheckUsername(username);
+                            if (checkusername == true) {
+                                Boolean insert = loginDatabaseHelper.Insert(username, password);
+                                if (insert == true) {
+                                    Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_SHORT).show();
+                                    rusername.setText("");
+                                    rpassword.setText("");
+                                    rconfrom_password.setText("");
+                                }
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_SHORT).show();
                             }
-                        }else{
-                            Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_SHORT).show();
                         }
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
