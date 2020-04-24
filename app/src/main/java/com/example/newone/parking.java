@@ -58,7 +58,13 @@ public class parking extends AppCompatActivity {
         deleteData();
         search();
 
-       
+        Payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(parking.this,Payment.class);
+                startActivity(intent);
+            }
+        });
 
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,33 +132,33 @@ public class parking extends AppCompatActivity {
 
 
                         if(vechhileno.isEmpty()){
-                            Vechile_no.setError("Enter the vechile Number");
+                            Vechile_no.setError("Enter the Card Number");
                             Vechile_no.requestFocus();
                             return;
                         }
 
                         if(Email.isEmpty()){
-                            mail.setError("Enter the Email address");
+                            mail.setError("Enter the Card Expery Date");
                             mail.requestFocus();
                             return;
                         }
                         if(Company.isEmpty()){
-                            company.setError("Enter the Company name");
+                            company.setError("Enter the CVC");
                             company.requestFocus();
                             return;
                         }
                         if(colour.isEmpty()){
-                            carcolour.setError("Enter the Car Colour");
+                            carcolour.setError("Enter the name in the card");
                             carcolour.requestFocus();
                             return;
                         }
                         if(hour.isEmpty()){
-                            Hour.setError("Enter the Parking hours");
+                            Hour.setError("Enter the name in the card");
                             Hour.requestFocus();
                             return;
                         }
                         if(Slot.isEmpty()){
-                            slot.setError("Enter the Parking Slot");
+                            slot.setError("Enter the name in the card");
                             slot.requestFocus();
                             return;
                         }
