@@ -14,14 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class parking extends AppCompatActivity {
-    parkingDatabaseHelper myDb1;
-    EditText mail;
-    EditText Vechile_no;
-    EditText company;
-    EditText carcolour;
-    EditText Hour;
-    EditText slot;
-    EditText search22;
+   
 
     Button Edit;
     Button VIEW;
