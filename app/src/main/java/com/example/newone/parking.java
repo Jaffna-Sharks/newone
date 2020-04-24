@@ -207,7 +207,26 @@ public class parking extends AppCompatActivity {
 
     public void viewAll() {
 
-        
+        VIEW.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Cursor res = myDb1.getAllData();
+                        if (res.getCount() == 0) {
+                            showMessage("Error", "Nothing Found");
+                            return;
+                        }
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            buffer.append("VECHILE NO :" + res.getString(1) + "\n");
+                            buffer.append("EMAIL :" + res.getString(2) + "\n");
+                            buffer.append("COMPANY :" + res.getString(3) + "\n");
+                            buffer.append("CAR COLOUR : :" + res.getString(4) + "\n");
+                            buffer.append("HOUR :" + res.getString(5) + "\n");
+                            buffer.append("SLOT :" + res.getString(6) + "\n\n");
+
+
+                        }
 
                         showMessage("parking Details", buffer.toString());
                     }
