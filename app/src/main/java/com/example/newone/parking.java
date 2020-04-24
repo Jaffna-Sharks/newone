@@ -118,60 +118,7 @@ public class parking extends AppCompatActivity {
 
     public void addData() {
 
-        ADD.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                        String vechhileno = Vechile_no.getText().toString().trim();
-                        String Email = mail.getText().toString().trim();
-                        String Company = company.getText().toString().trim();
-                        String colour = carcolour.getText().toString().trim();
-                        String hour = Hour.getText().toString().trim();
-                        String Slot = slot.getText().toString().trim();
-
-
-                        if(vechhileno.isEmpty()){
-                            Vechile_no.setError("Enter the Card Number");
-                            Vechile_no.requestFocus();
-                            return;
-                        }
-
-                        if(Email.isEmpty()){
-                            mail.setError("Enter the Card Expery Date");
-                            mail.requestFocus();
-                            return;
-                        }
-                        if(Company.isEmpty()){
-                            company.setError("Enter the CVC");
-                            company.requestFocus();
-                            return;
-                        }
-                        if(colour.isEmpty()){
-                            carcolour.setError("Enter the name in the card");
-                            carcolour.requestFocus();
-                            return;
-                        }
-                        if(hour.isEmpty()){
-                            Hour.setError("Enter the name in the card");
-                            Hour.requestFocus();
-                            return;
-                        }
-                        if(Slot.isEmpty()){
-                            slot.setError("Enter the name in the card");
-                            slot.requestFocus();
-                            return;
-                        }
-
-                        boolean isInserted = myDb1.insertData(vechhileno,Email,Company,colour,hour,Slot);
-
-                        if (isInserted == true)
-                            Toast.makeText(parking.this, "Details Are Inserted", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(parking.this, "Details Are Not Inserted", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
+        
 
     }
     public void search() {
