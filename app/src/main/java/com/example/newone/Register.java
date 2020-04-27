@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String PASSWORD_REGEX =
+                String PASSWORD_REGE1X =
                         "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$";
 
                 String username = rusername.getText().toString();
