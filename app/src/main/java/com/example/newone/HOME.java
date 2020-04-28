@@ -18,7 +18,7 @@ public class HOME extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        supewr.onCreate(savedInstanceState);
         setContentView(R.layout.custom_dialog);
 
 
